@@ -22,25 +22,25 @@
 
 @mixin boton($color, $texto) {
     background-color: $color;
-    font-size: 2rem;
-    padding: 1.2rem 4rem;
-    font-weight: 700;
-    display: block;
-    width: 100%;
-    text-align: center;
+    border: none;
     color: $texto;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.2rem 4rem;
+    text-align: center;
     text-decoration: none;
     transition: background-color .3s ease;
-    border: none;
+    width: 100%;
 
     &:hover {
-        cursor: pointer;
         background-color: darken($color, 10);
+        cursor: pointer;
     }
 
     @include tablet {
-        width: auto;
         display: inline-block;
+        width: auto;
         
     }
 }
@@ -49,4 +49,12 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+
+@mixin bgImage($url, $colorDegradado){
+    background-image: linear-gradient($colorDegradado 0%, $colorDegradado 100%),url( $url );
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

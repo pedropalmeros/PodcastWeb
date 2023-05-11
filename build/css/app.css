@@ -370,3 +370,69 @@ ul {
   padding: 0;
   list-style: none;
 }
+
+.site-header {
+  background-image: linear-gradient(rgba(57, 70, 89, 0.7) 0%, rgba(57, 70, 89, 0.7) 100%), url("../img/header.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+}
+.site-header .logo {
+  margin: 0 auto;
+  max-width: 20rem;
+}
+@media (min-width: 768px) {
+  .site-header .logo {
+    margin: 0;
+  }
+}
+.site-header .contenido-header {
+  padding-bottom: 10rem;
+  padding-top: 10rem;
+}
+@media (min-width: 1024px) {
+  .site-header .contenido-header {
+    padding-bottom: 15rem;
+    padding-top: 15rem;
+  }
+}
+.site-header .contenido-header h1 {
+  color: #FFFFFF;
+  font-size: 4.5rem;
+}
+@media (min-width: 768px) {
+  .site-header .contenido-header h1 {
+    font-size: 6rem;
+    max-width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .site-header .contenido-header h1 {
+    max-width: 40%;
+  }
+}
+
+.boton-primario {
+  background-color: #84d9bc;
+  border: none;
+  color: #313c4e;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1.2rem 4rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+.boton-primario:hover {
+  background-color: #5dcda7;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .boton-primario {
+    display: inline-block;
+    width: auto;
+  }
+}
