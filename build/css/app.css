@@ -318,8 +318,8 @@ template {
 
 /** Media Queries **/
 html {
-  font-size: 62.5%;
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *, *:before, *:after {
@@ -338,9 +338,9 @@ p {
 }
 
 .contenedor {
-  width: 95%;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
+  width: 95%;
 }
 
 a {
@@ -348,8 +348,8 @@ a {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 h1, h2, h3 {
@@ -366,9 +366,38 @@ h3 {
   text-transform: uppercase;
 }
 
+h2 {
+  color: #313c4e;
+  display: inline-block;
+  font-size: 3.6rem;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    margin-top: 0;
+  }
+}
+h2::after {
+  background-color: #84d9bc;
+  content: "";
+  display: block;
+  height: 1rem;
+  margin: -1.4rem 0 0 0;
+  width: calc(100% + 2rem);
+}
+
 ul {
-  padding: 0;
   list-style: none;
+  padding: 0;
+}
+
+.seccion {
+  padding: 3rem 0;
+}
+@media (min-width: 768px) {
+  .seccion {
+    padding: 8rem 0;
+  }
 }
 
 .site-header {
@@ -410,6 +439,15 @@ ul {
 @media (min-width: 1024px) {
   .site-header .contenido-header h1 {
     max-width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .crea-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
 }
 
