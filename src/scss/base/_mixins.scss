@@ -58,3 +58,23 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@mixin headingBorder($colorTexto, $colorLinea){
+    color: $colorTexto;
+    display: inline-block;
+    font-size: 3.6rem;
+    margin-top: 5rem;
+    @include tablet {
+        margin-top: 0;
+    }
+    &::after{
+        background-color: $colorLinea;
+        content: '';
+        display: block;
+        height: 1rem;
+        margin: -1.4rem 0 0 0;
+        width: calc( 100% + 2rem);
+    }
+}
+
+
