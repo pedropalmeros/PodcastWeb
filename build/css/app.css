@@ -513,6 +513,32 @@ ul {
   width: calc(100% + 2rem);
 }
 
+.planes {
+  background-color: #313c4e;
+}
+.planes h2 {
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 3.6rem;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .planes h2 {
+    margin-top: 0;
+  }
+}
+.planes h2::after {
+  background-color: #84d9bc;
+  content: "";
+  display: block;
+  height: 1rem;
+  margin: -1.4rem 0 0 0;
+  width: calc(100% + 2rem);
+}
+.planes .descripcion {
+  color: #FFFFFF;
+}
+
 .boton-primario {
   background-color: #84d9bc;
   border: none;
