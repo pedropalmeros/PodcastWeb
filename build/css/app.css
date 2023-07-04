@@ -539,7 +539,81 @@ ul {
   color: #FFFFFF;
 }
 
-.boton-primario {
+.nuestros-planes {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .nuestros-planes {
+    flex-direction: row;
+    margin: 10rem auto 0 auto;
+    max-width: 80rem;
+  }
+}
+.nuestros-planes .plan {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #e1e1e1;
+  flex-grow: 1;
+  padding: 16rem 4rem 4rem 4rem;
+}
+@media (min-width: 768px) {
+  .nuestros-planes .plan {
+    border: none;
+    transition-duration: 300ms;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+  }
+  .nuestros-planes .plan:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+.nuestros-planes .plan .precio {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.nuestros-planes .plan .listado li {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.nuestros-planes .plan .listado li:last-of-type {
+  margin-bottom: 0;
+}
+.nuestros-planes .plan.inicio {
+  background-image: url("../img/icono_inicio.svg");
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
+  background-size: 10rem;
+}
+.nuestros-planes .plan.negocio {
+  background-color: #84d9bc;
+  order: -1;
+  background-image: url("../img/icono_negocio.svg");
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
+  background-size: 10rem;
+}
+@media (min-width: 768px) {
+  .nuestros-planes .plan.negocio {
+    background-position: 50% 7rem;
+    border-radius: 2rem;
+    margin: -5rem 0;
+    order: unset;
+    padding-top: 21rem;
+    z-index: 100;
+  }
+}
+.nuestros-planes .plan.pro {
+  background-image: url("../img/icono_pro.svg");
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
+  background-size: 10rem;
+}
+
+.boton-primario, .boton-plan {
   background-color: #84d9bc;
   border: none;
   color: #313c4e;
@@ -552,13 +626,19 @@ ul {
   transition: background-color 0.3s ease;
   width: 100%;
 }
-.boton-primario:hover {
+.boton-primario:hover, .boton-plan:hover {
   background-color: #5dcda7;
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  .boton-primario {
+  .boton-primario, .boton-plan {
     display: inline-block;
     width: auto;
   }
+}
+
+.boton-plan {
+  border: 2px solid #FFFFFF;
+  display: block;
+  margin-top: 2rem;
 }
