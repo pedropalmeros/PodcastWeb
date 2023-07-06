@@ -20,28 +20,18 @@
 }
 
 
-@mixin boton($color, $texto) {
-    background-color: $color;
-    border: none;
-    color: $texto;
-    display: block;
+@mixin boton($bgColor, $colorTexto) {
+    background-color: $bgColor;
+    padding: 2rem 4rem;
+    color: $colorTexto;
+    margin-top: 1rem;
+    border-radius: 3rem;
     font-size: 2rem;
     font-weight: 700;
-    padding: 1.2rem 4rem;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color .3s ease;
-    width: 100%;
-
-    &:hover {
-        background-color: darken($color, 10);
-        cursor: pointer;
-    }
+    display: block;
 
     @include tablet {
         display: inline-block;
-        width: auto;
-        
     }
 }
 
@@ -50,37 +40,3 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
-
-
-@mixin bgImage($url, $colorDegradado){
-    background-image: linear-gradient($colorDegradado 0%, $colorDegradado 100%),url( $url );
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@mixin headingBorder($colorTexto, $colorLinea){
-    color: $colorTexto;
-    display: inline-block;
-    font-size: 3.6rem;
-    margin-top: 5rem;
-    @include tablet {
-        margin-top: 0;
-    }
-    &::after{
-        background-color: $colorLinea;
-        content: '';
-        display: block;
-        height: 1rem;
-        margin: -1.4rem 0 0 0;
-        width: calc( 100% + 2rem);
-    }
-}
-
-@mixin iconoBg($url){
-    background-image: url($url);
-    background-position: 50% 2rem;
-    background-repeat: no-repeat;
-    background-size: 10rem;
-}
-
