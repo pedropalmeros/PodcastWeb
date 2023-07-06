@@ -12,6 +12,53 @@
   
 </head>
 <body>
+    <header class="header">
+        <div class="barra contenedor">
+            <p class="barra__nombre">Viaje</p>
+        </div>
+        
+        <nav class="barra__navegacion contenedor">
+            <a href="#">Lugares para hospedarte</a>
+            <a href="#">Experiencias</a>
+            <a href="#">Experiencias en Línea</a>
+        </nav>
+
+        <nav class="barra__login contenedor">
+            <a href="#">Hazte Anfitrión</a>
+        </nav>
+
+        <form action="" class="formulario contenedor">
+            <div class="formulario__campo">
+                <label for="ubicacion" class="formulario__label">Ubicación</label>
+                <input type="text" class="formulario__input" id="ubicacion" placeholder="¿A dónde viajas?">
+            </div>
+
+            <div class="formulario__campo">
+                <label for="llegada" class="formulario__label">Llegada</label>
+                <input type="date" class="formulario__input" id="llegada">
+            </div>
+
+            <div class="formulario__campo">
+                <label for="salida" class="formulario__label">Salida</label>
+                <input type="date" class="formulario__input" id="Salida">
+            </div>
+
+            <div class="formulario__campo">
+                <label for="huespedes" class="formulario__label">Huéspedes</label>
+                <input type="number" class="formulario__input" id="huespedes" placeholder="¿Cuántos?">
+            </div>
+
+            <div class="formulario__campo">
+                <input type="submit" class="formulario__submit" id="huespedes" value="Buscar">
+            </div>
+        </form>
+
+        <div class="header__busqueda contenedor">
+            <p class="header__busqueda-label">¿No sabes a dónde ir? </p>
+            <a href="#" class="header__busqueda-flexible"></a>
+        </div>
+
+    </header>
     
 </body>
 </html>
