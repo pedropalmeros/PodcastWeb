@@ -1,8 +1,8 @@
 @use 'base/variables' as v;
 
 h1, h2, h3 {
-    margin: 0;
     line-height: 1.5;
+    margin: 0;
 }
 h1 {
     font-size: 4rem;
@@ -15,4 +15,8 @@ h3 {
 }
 a {
     text-decoration: none;
+}
+
+[class$="__heading"]{
+    margin: 2rem 0;
 }

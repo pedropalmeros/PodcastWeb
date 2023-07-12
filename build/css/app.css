@@ -350,8 +350,8 @@ ul {
 }
 
 h1, h2, h3 {
-  margin: 0;
   line-height: 1.5;
+  margin: 0;
 }
 
 h1 {
@@ -368,6 +368,10 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+[class$=__heading] {
+  margin: 2rem 0;
 }
 
 .header {
@@ -474,4 +478,37 @@ a {
   height: 4rem;
   padding: 0 2rem;
   text-transform: uppercase;
+}
+
+.destinos__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .destinos__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .destinos__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.destino {
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+.destino__imagen {
+  width: 14rem;
+}
+.destino__nombre, .destino__distancia {
+  margin: 0;
 }
