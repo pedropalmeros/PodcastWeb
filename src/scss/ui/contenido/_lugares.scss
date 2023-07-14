@@ -14,10 +14,14 @@
 
         @include m.tablet { 
             @include m.grid(2,2rem);
+            overflow-x: hidden;
+            overflow-y: hidden;
         }
 
         @include m.desktop { 
             @include m.grid(4,2rem);
+            overflow-x: hidden;
+            overflow-y: hidden;
         }
     }
 }

@@ -532,6 +532,8 @@ a {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
 @media (min-width: 1024px) {
@@ -539,6 +541,8 @@ a {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
 
