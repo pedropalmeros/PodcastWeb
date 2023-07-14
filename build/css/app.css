@@ -391,13 +391,13 @@ a {
 }
 .header__busqueda-boton {
   background-color: #FFFFFF;
-  padding: 2rem 4rem;
-  color: #e8505b;
-  margin-top: 1rem;
   border-radius: 3rem;
+  color: #e8505b;
+  display: block;
   font-size: 2rem;
   font-weight: 700;
-  display: block;
+  margin-top: 1rem;
+  padding: 2rem 4rem;
 }
 @media (min-width: 768px) {
   .header__busqueda-boton {
@@ -511,4 +511,40 @@ a {
 }
 .destino__nombre, .destino__distancia {
   margin: 0;
+}
+
+.lugares__grid {
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 30rem);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+.lugares__grid > * {
+  scroll-snap-align: center;
+}
+@media (min-width: 768px) {
+  .lugares__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .lugares__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.lugar__imagen {
+  border-radius: 1rem;
+}
+.lugar__nombre {
+  font-size: 1.8rem;
 }

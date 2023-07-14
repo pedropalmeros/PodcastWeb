@@ -22,13 +22,13 @@
 
 @mixin boton($bgColor, $colorTexto) {
     background-color: $bgColor;
-    padding: 2rem 4rem;
-    color: $colorTexto;
-    margin-top: 1rem;
     border-radius: 3rem;
+    color: $colorTexto;
+    display: block;
     font-size: 2rem;
     font-weight: 700;
-    display: block;
+    margin-top: 1rem;
+    padding: 2rem 4rem;
 
     @include tablet {
         display: inline-block;
@@ -39,4 +39,14 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin scrollHorizontal{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    
+    > *{ //First child no matter which type
+        scroll-snap-align: center;
+    }
 }
