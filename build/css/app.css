@@ -552,3 +552,62 @@ a {
 .lugar__nombre {
   font-size: 1.8rem;
 }
+
+.anfitrion {
+  background-image: linear-gradient(to bottom, #000 0%, #000 50%, transparent 50%), url("../img/anfitrion.jpg");
+  background-position: center, center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%, 60rem;
+  border-radius: 2rem;
+  color: #FFFFFF;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 5rem;
+  row-gap: 10rem;
+}
+@media (min-width: 480px) {
+  .anfitrion {
+    background-position: center, center 200%;
+    background-size: 100%, 60rem;
+  }
+}
+@media (min-width: 768px) {
+  .anfitrion {
+    background-image: linear-gradient(to right, #000 0%, #000 45%, transparent 55%), url("../img/anfitrion.jpg");
+    background-position: center, 50% 30%;
+    background-size: 100%, auto;
+    grid-template-rows: unset;
+    padding: 15rem 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .anfitrion {
+    background-position: center, right center;
+  }
+}
+@media (min-width: 768px) {
+  .anfitrion__contenido {
+    max-width: 50%;
+  }
+}
+.anfitrion__texto {
+  color: #FFFFFF;
+}
+.anfitrion__enlace {
+  background-color: #FFFFFF;
+  border-radius: 3rem;
+  color: #000;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .anfitrion__enlace {
+    display: inline-block;
+  }
+}
