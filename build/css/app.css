@@ -611,3 +611,36 @@ a {
     display: inline-block;
   }
 }
+
+.experiencias__listado {
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 30rem);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+.experiencias__listado > * {
+  scroll-snap-align: center;
+}
+@media (min-width: 768px) {
+  .experiencias__listado {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.experiencia__imagen {
+  border-radius: 1rem;
+}
+.experiencia__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.experiencia__descripcion {
+  font-size: 1.8rem;
+}
